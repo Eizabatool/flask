@@ -4,15 +4,6 @@ application = Flask(__name__)
 def index():
     return render_template("index.html")
 
-#@application.route("/myname/", methods=['POST'])
-#def my_name():
-#
-#     3fname = request.form['fname']
-#    3 lname = request.form['lname']
-# tname = request.form['tname']
-#     name = int(fname) + int(lname) + int(tname)
-#     return render_template('index.html', results=name)
-
 @application.route("/myencoder/", methods=['GET'])
 def myfunc():
     from sklearn.preprocessing import LabelEncoder
@@ -27,7 +18,6 @@ def myfunc():
 def train():
     from sklearn import neighbors
     neighbors.KNeighborsClassifier
-    dd
     from sklearn.model_selection import train_test_split
     from sklearn.model_selection import train_test_split
     x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.20)
